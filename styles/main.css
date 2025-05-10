@@ -1,0 +1,214 @@
+/* 🔄 Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    padding: 2rem;
+    background: #f0f0f0;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
+  }
+  
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  .code-block {
+    background: #1e1e1e;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: monospace;
+    margin-top: 1rem;
+  }
+  
+  /* 🎯 Selectors Section */
+  .demo-container {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+  }
+  
+  .box {
+    padding: 1rem;
+    border: 2px solid #333;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    background-color: lightblue;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .box.highlight {
+    background-color: gold;
+  }
+  
+  .important {
+    background-color: black !important;
+    color: white !important;
+  }
+  
+  .selector-controls {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  
+  .selector-controls button {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border: none;
+    background-color: #2d88ff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .selector-controls button:hover {
+    background-color: #1a5fb4;
+  }
+  
+  .specificity-output {
+    margin-top: 1rem;
+    font-size: 1rem;
+    background: #eef;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  
+  /* 📦 Box Model Section */
+  .box-model-controls {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  
+  .box-model-controls label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+  }
+  
+  .box-model-controls input[type="range"] {
+    width: 150px;
+  }
+  
+  .box-model-demo {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .box-model-example {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid steelblue;
+    margin: 20px;
+    background-color: peachpuff;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .box-model-example:hover {
+    transform: scale(1.05);
+    background-color: lightsalmon;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 🧱 Flexbox Section */
+  .flex-controls {
+    margin: 1rem 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .flex-controls label {
+    font-weight: bold;
+  }
+  
+  .flex-controls select {
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .flexbox-demo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    height: 150px;
+    background-color: #e0f7fa;
+    margin: 2rem 0;
+    border-radius: 8px;
+    border: 2px dashed #00acc1;
+  }
+  
+  .flex-item {
+    background-color: #00acc1;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+  }
+  
+  .flex-item:hover {
+    transform: scale(1.1) rotate(3deg);
+  }
+  

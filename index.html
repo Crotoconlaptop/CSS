@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Visual Learning</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header>
+    <h1>🎨 CSS Visual Learning</h1>
+    <nav>
+      <ul>
+        <li><a href="#selectors">Selectors</a></li>
+        <li><a href="#box-model">Box Model</a></li>
+        <li><a href="#flexbox">Flexbox</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Selectors Section -->
+    <section id="selectors">
+      <h2>🎯 CSS Selectors & Specificity</h2>
+      <p>Click the buttons to apply different selectors and see which one wins based on specificity.</p>
+
+      <div class="selector-controls">
+        <button data-style="class">Apply .box</button>
+        <button data-style="class-highlight">Apply .box.highlight</button>
+        <button data-style="id">Apply #test-box (inline style)</button>
+        <button data-style="important">Apply .box !important</button>
+        <button data-style="reset">Reset</button>
+      </div>
+
+      <div class="demo-container">
+        <div id="test-box" class="box">Target Box</div>
+      </div>
+
+      <div class="specificity-output">
+        <strong>Current Style:</strong> <span id="style-output">.box</span>
+      </div>
+
+      <div class="code-block">
+        <pre><code>
+/* CSS Rules */
+.box {
+  background-color: lightblue;
+}
+.box.highlight {
+  background-color: gold;
+}
+.important {
+  background-color: black !important;
+  color: white !important;
+}
+        </code></pre>
+      </div>
+    </section>
+
+    <!-- Box Model Section -->
+    <section id="box-model">
+      <h2>📦 CSS Box Model</h2>
+      <p>Adjust the sliders to see how padding, border, and margin affect the box.</p>
+
+      <div class="box-model-controls">
+        <label>
+          Padding:
+          <input type="range" id="padding-slider" min="0" max="50" value="20">
+        </label>
+        <label>
+          Border:
+          <input type="range" id="border-slider" min="0" max="20" value="5">
+        </label>
+        <label>
+          Margin:
+          <input type="range" id="margin-slider" min="0" max="50" value="20">
+        </label>
+      </div>
+
+      <div class="box-model-demo">
+        <div class="box-model-example">Box Model</div>
+      </div>
+    </section>
+
+    <!-- Flexbox Section -->
+    <section id="flexbox">
+      <h2>🧱 Flexbox Layout</h2>
+      <p>Adjust the layout direction and alignment using the controls.</p>
+
+      <div class="flex-controls">
+        <label>
+          Flex Direction:
+          <select id="flex-direction">
+            <option value="row">row</option>
+            <option value="row-reverse">row-reverse</option>
+            <option value="column">column</option>
+            <option value="column-reverse">column-reverse</option>
+          </select>
+        </label>
+
+        <label>
+          Justify Content:
+          <select id="justify-content">
+            <option value="flex-start">flex-start</option>
+            <option value="center">center</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+            <option value="space-evenly">space-evenly</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="flexbox-demo" id="flexbox-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for CSS learners</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
